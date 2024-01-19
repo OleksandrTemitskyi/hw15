@@ -1,0 +1,88 @@
+.partners {
+  @include vieport-xxl{
+    margin: 0 100px;
+  }
+  
+
+  // .partners__title
+
+  &__title {
+    @include partners-title;
+  }
+
+  // .partners__list
+
+  &__list {
+    height: 720px;
+    overflow: auto;
+    @include vieport-md {
+      overflow: visible;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+  }
+
+  // .partners__list-item
+
+  &__list-item {
+    width: 100%;
+    height: 120px;
+    @include vieport-md{
+    flex: 1 0 30%;
+  }
+    @include vieport-lg{
+    flex: 1 1 25%;
+    }
+  }
+}
+.hilel {
+  background: $bg-hilel url(../images/hillel.png) no-repeat center/217px 48px;
+
+  @include vieport-xxl {
+    border-radius: 12px 0px 0px 0px;
+  }
+}
+.wannabiz {
+  background: $bg-wannabiz url(../images/wannabiz.png) no-repeat center/200px 32px;
+}
+.targerine {
+  background: $bg-targerine url(../images/tapgerine.png) no-repeat center/180px 44px;
+}
+.dlook {
+  background: $bg-dlook url(../images/3dlook.png) no-repeat center/180px 42px;
+  @include vieport-xxl {
+    border-radius: 0px 12px 0px 0px;
+  }
+}
+.orangear {
+  background: $bg-orangear url(../images/orangear.png) no-repeat center/174px 44px;
+}
+.adtelligent {
+  background: $bg-adtelligent url(../images/adtelligent.png) no-repeat center/132px 48px;
+}
+.clikky {
+  background: $bg-clikky url(../images/clickky.png) no-repeat center/138px 61px;
+}
+.leasing {
+  background: $bg-leasing url(../images/eco-leasing.png) no-repeat center/146px 76px;
+}
+.infratek {
+  background: $bg-infratek url(../images/infratek.png) no-repeat center/182px 60px;
+  @include vieport-xxl {
+    border-radius: 0px 0px 0px 12px;
+  }
+}
+.citipar {
+  background: $bg-citipar url(../images/city-par.png) no-repeat center/181px 31px;
+}
+.artprint {
+  background: $bg-artprint url(../images/artprint.png) no-repeat center/189px 46px;
+}
+.ultimate {
+  background: $bg-ultimate url(../images/ultimatecard.png) no-repeat center/152px 95px;
+  @include vieport-xxl {
+    border-radius: 0px 0px 12px 0px;
+  }
+}

@@ -1,0 +1,142 @@
+// !vars
+$main-color: #323264;
+$alt-color: #46466e;
+$soft-color: #686887;
+$accent-color: #f0145a;
+$bg-gray: #f5f5fa;
+$bg-borderwrap: #cacadb;
+$bg-borderbefore: #e7e7f2;
+$regular-color: #24a3ff;
+$hover-coolor: #0085ff;
+$active-color: #006ccf;
+$bg-color: #f5f5fa;
+$bg-alt-color: #ededf7;
+$bg-hilel: #1c4280;
+$bg-orangear: #fd9339;
+$bg-infratek: #eaeaea;
+$bg-adtelligent:#e2e2e4;
+$bg-wannabiz: #143646;
+$bg-citipar: #282240;
+$bg-targerine: #f48b30;
+$bg-clikky: #c71c36;
+$bg-artprint: #1d4568;
+$bg-dlook: #9e4dc3;
+$bg-leasing: #dcf3f9;
+$bg-ultimate: #000;
+$text-color: #b3b3ba;
+$basic-white: #ffffff;
+$separator-color: #e6e6f0;
+$gradient: linear-gradient(130deg, #323264, #323264 70%, #a54b5f);
+$gradient-soft: linear-gradient(42deg,  #323264 15%,  #323264 50%,  #7a425e 88%);
+$gradient-red: linear-gradient(325deg, #f0145a 5%, #693264 70%);
+$gradient-supersoft: linear-gradient(230deg, #323264 10%, #323264 60%, #643e72 90%);
+$gradient-red-text: linear-gradient(90deg, #f0145a, #ef8080);
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-rounded: 50%;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;
+
+
+@mixin vieport-md {
+	@media (min-width: $breakpoint-md) {
+		@content;
+	}
+}
+
+@mixin vieport-lg {
+	@media (min-width: $breakpoint-lg) {
+		@content;
+	}
+}
+
+@mixin vieport-xl {
+	@media (min-width: $breakpoint-xl) {
+		@content;
+	}
+}
+
+@mixin vieport-xxl {
+	@media (min-width: $breakpoint-xxl) {
+		@content;
+	}
+}
+
+@mixin main-gradient-text($bg-color: $gradient-red-text) {
+	background: $bg-color;
+	color: transparent;
+	background-clip: text;
+}
+
+@mixin title($color: $basic-white) {
+	font-size: 38px;
+	font-weight: 700;
+	color: $color;
+}
+
+@mixin subtitle($color: $gradient-red-text) {
+	font-weight: 700;
+	font-size: 30px;
+	color: $color;
+
+	@include vieport-md {
+		font-size: 38px;
+	}
+}
+
+@mixin partners-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: $main-color;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin base-link ($color: $regular-color, $hover: $accent-color) {
+	color: $color;
+	text-decoration: none;
+	transition: .2s;
+
+	&:hover {
+		color: $hover;
+	}
+
+	&:hover::before {
+		border-color: $accent-color;
+	}
+}
+
+@mixin arrow-right {
+		top: 7px;
+    bottom: 0px;
+    left: 100%;
+    width: 7px;
+    height: 7px;
+    border-bottom: 2px solid $regular-color;
+    border-right: 2px solid $regular-color;
+    transform: rotate(-45deg);
+}
+
+@mixin services__cards-title{
+	font-size: 22px;
+	color: $active-color;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+@mixin services__cards-desc{
+	font-size: 16px;
+	font-weight: 400;
+	color: $basic-white;
+}

@@ -1,0 +1,123 @@
+.wrap {
+   padding: 30px;
+   background: $bg-adtelligent;
+   @include vieport-xxl{
+      margin-top: 60px;
+   }
+}
+.publications {
+   padding: 30px 0px;
+   border-bottom: 2px solid $separator-color;
+		// .publications__link
+
+		&__link {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      @include base-link;
+      text-transform: uppercase;
+      position: relative;
+      padding-right: 8px;
+      &::before {
+         content: '';
+         position: absolute;
+         top: 5.5px;
+         right: 0;
+         width: 6px;
+         height: 6px;
+         border-bottom: 2px solid $regular-color;
+         border-right: 2px solid $regular-color;
+         transform: rotate(-45deg);
+         letter-spacing: 1px;
+         transition: .2s;
+      }
+		}
+
+		// .publications__title
+
+		&__title {
+      margin-bottom: 30px;
+      background: $gradient-red-text;
+      background-clip: text;
+      color: transparent;
+      @include subtitle;
+		}
+
+		// .publications__cards
+
+		&__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      flex-wrap: wrap;
+      @include vieport-md{
+      flex-direction: row;
+      }
+		}
+
+		// .publications__card
+
+		&__card {
+      background-color: $basic-white;
+      border-radius: 8px;
+      overflow: hidden;
+
+      @include vieport-md{
+         flex: 1 1 45%;
+      }
+
+      @include vieport-lg{
+         flex: 1 1 30%;
+      }
+      
+		}
+
+		// .publications__image
+
+		&__image {
+         img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+         }
+		}
+
+		// .publications__content
+
+		&__content {
+      margin: 30px;
+		}
+
+		// .publications__subtitle
+
+		&__subtitle {
+      margin-bottom: 15px;
+      @include base-link;
+      display: block;
+      font-weight: 700;
+		}
+
+		// .publications__data
+
+		&__data {
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #B3B3BA;
+      font-size: 12px;
+		}
+
+		// .publications__desc
+
+		&__desc {
+      border-top: 4px solid $separator-color;
+      padding-top: 15px;
+      font-size: 14px;
+		}
+}
+.publications__services{
+   border-radius: 12px 12px 0 0;
+   overflow: hidden;
+   margin-top: 60px;
+}

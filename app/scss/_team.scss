@@ -1,0 +1,93 @@
+.team {
+	padding: 70px 0 60px;
+	line-height: 1.2;
+	&__swiper {
+		margin-bottom: 30px;
+	}
+
+	&__wrapper {
+		align-items: center;
+	}
+
+	&__slide {
+		border-radius: $radius-md;
+		overflow: hidden;
+		@include vieport-lg {
+			display: flex;
+		}
+	}
+
+	&__image {
+		height: 500px;
+		position: relative;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		@include vieport-lg {
+			flex: 0 0 400px;
+			height: auto;
+		}
+	}
+
+	&__inner {
+		padding: 30px;
+		width: 100%;
+		background: rgba($text-color, .3);
+	}
+
+	&__inner-link {
+		@include base-link;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		position: relative;
+		padding-right: 8px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 5.5px;
+			right: 0;
+			width: 6px;
+			height: 6px;
+			border-bottom: 2px solid $regular-color;
+			border-right: 2px solid $regular-color;
+			transform: rotate(-45deg);
+			letter-spacing: 1px;
+			transition: .2s;
+		}
+	}
+
+	&__inner-title {
+		@include subtitle;
+		@include main-gradient-text;
+		margin-bottom: 30px;
+	}
+
+	&__inner-name {
+		p {
+			font-weight: 700;
+			font-size: 16px;
+			color: $text-color;
+		}
+		p + p {
+			margin-top: 7px;
+			font-weight: 400;
+			font-size: 14px;
+		}
+	}
+
+	&__swiper-pagination {
+		position: static;
+
+		.swiper-pagination-bullet {
+			width: 16px;
+			height: 16px;
+			background: $regular-color;
+		}
+	}
+}

@@ -1,0 +1,72 @@
+
+.form {
+
+  // .form__name
+
+  &__name {
+    padding: 15px;
+    width: 100%;
+    margin-top: 5px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid $text-color;
+    background: $separator-color;
+  }
+
+  // .form__massage
+
+  &__massage {
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid $text-color;
+    background: $separator-color;
+  }
+
+  // .form__desc
+
+  &__desc {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-color;
+  }
+
+  // .form__tel
+
+  &__tel {
+    padding: 15px;
+    width: 100%;
+    margin-top: 5px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid $text-color;
+    background: $separator-color;
+  }
+
+  // .form__email
+
+  &__email {
+    padding: 15px;
+    width: 100%;
+    margin-top: 5px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid $text-color;
+    background: $separator-color;
+  }
+
+  // .form__button
+
+  &__button {
+    min-width: 100%;
+    height: 50px;
+    border: 1px solid $active-color;
+    background: $active-color;
+    color: $basic-white;
+    border-radius: 8px;
+  }
+}

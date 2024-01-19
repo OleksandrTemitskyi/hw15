@@ -1,0 +1,136 @@
+.services {
+
+  // .services__link
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    @include base-link;
+      text-transform: uppercase;
+      position: relative;
+      padding-right: 8px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 5.5px;
+        right: 0;
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid $regular-color;
+        border-right: 2px solid $regular-color;
+        transform: rotate(-45deg);
+        letter-spacing: 1px;
+        transition: .2s;
+      }
+  }
+
+  // .services__title
+
+  &__title {
+    @include main-gradient-text;
+    @include subtitle;
+    @include vieport-md;
+    padding-bottom: 60px;
+  }
+
+  // .services__cards
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 60px;
+
+
+    @include vieport-md{
+      display: flex;
+      flex-direction: row;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+  }
+
+  // .services__cards-card
+
+  &__cards-card {
+    @include vieport-md{
+    flex: 0 0 45%;
+    }
+
+    @include vieport-lg{
+      flex: 0 0 28%;
+    }
+
+  }
+
+  // .services__cards-background
+
+  &__cards-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 24px;
+    width: 92px;
+    height: 92px;
+    margin-bottom: 30px;
+  }
+
+  // .services__cards-svg
+
+  &__cards-svg {
+    width: 64px;
+		height: 64px;
+  }
+
+  // .services__cards-title
+
+  &__cards-title {
+    @include services__cards-title;
+    @include base-link ($color: $regular-color, $hover: $accent-color);
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  // .services__cards-desc
+
+  &__cards-desc {
+    @include services__cards-desc;
+  }
+
+  &__btn {
+  position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 40px;
+	width: 80px;
+	height: 80px;
+	z-index: 200;
+	cursor: pointer;
+	color: $basic-white;
+	background: $active-color;
+	border-radius: $radius-rounded;
+  border: 0.5px solid rgb(80, 76, 76);
+  animation: pulsing 6s infinite;
+  transition: 2s;
+  @keyframes pulsing {
+    0% {
+      transform: scale(0.9, 0.9)
+    }
+    50% {
+      transform: scale(1.2, 1.2);
+    }
+    100% {
+      transform: scale(0.9, 0.9);
+    }
+  }
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,148 @@
+.footer {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include vieport-md{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+
+  // .footer__informations
+
+  &__informations {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include vieport-md{
+      margin-bottom: 0;
+      align-items: flex-start;
+    }
+  }
+
+  // .footer__one
+
+  &__one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include vieport-md{
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 30px;
+    }
+
+  }
+
+  // .footer__adress
+
+  &__adress {
+    margin-bottom: 10px;
+    color: $main-color;
+    @include vieport-md{
+      margin-bottom: 0;
+    }
+  }
+
+  // .footer__map
+
+  &__map {
+    display: block;
+    margin-bottom: 21px;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include base-link;
+    @include vieport-md{
+      margin-bottom: 0;
+    }
+  }
+
+  // .footer__two
+
+  &__two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include vieport-md{
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    }
+
+  }
+
+  // .footer__svg
+
+  &__svg {
+    svg{
+      width: 38px;
+      height: 38px;
+      display: block; 
+      margin-bottom: 10px;
+      @include vieport-md{
+        margin-bottom: 0;
+      }
+      }  
+  }
+
+  // .footer__dotted
+
+  &__dotted {
+    @include vieport-md{
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #B3B3BA;
+      flex: 1 0 6px;      
+      }  
+  }
+
+  // .footer__tel
+
+  &__tel {
+    display: block;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    font-weight: 700;   
+    @include base-link;
+    color: $main-color;
+    @include vieport-md{
+    margin-bottom: 0;
+    }
+  }
+
+  // .footer__email
+
+  &__email {
+    display: block;
+    font-weight: 700;
+    @include base-link;
+  }
+
+  // .footer__private
+
+  &__private {
+    color: #b3b3ba;
+  }
+}
+
+.wrap__footer{
+  background: $bg-adtelligent;
+  margin-top: -1px;
+  padding: 0 30px 30px 30px;
+}
+
+.footer__ecomerce{
+  padding: 30px;
+}
